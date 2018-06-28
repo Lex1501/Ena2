@@ -1,0 +1,44 @@
+create database Requerimientos;
+
+use Requerimientos;
+
+create table Usuarios( 
+id_usuario int not null auto_increment primary key,
+usuario varchar(20) not null,
+contraseña varchar(20) not null
+);
+
+create table Gerencia(
+id_gerencia int not null auto_increment primary key,
+gerencia varchar(25) not null
+);
+
+create table Departamentos(
+id_departamentos int not null auto_increment primary key,
+nombreDepartamento varchar(25) not null
+);
+
+create table Encargado(
+id_encargado int not null auto_increment primary key, 
+encargado varchar(30) not null
+);
+
+create table Asignado(
+id_asignado int not null auto_increment primary key, 
+nombre varchar(30) not null 
+);
+
+create table Requerimientos(
+id_requerimientos int not null auto_increment primary key, 
+descripcion varchar(60) not null
+);
+
+create table datos(
+id_datos int not null auto_increment primary key,
+id_gerencia int not null auto_increment foreign key references Gerencia(id_gerencia), 
+id_departamentos int not null auto_increment foreign key references Departamentos(id_departamentos), 
+id_asignado int not null auto_increment foreign key references Asignado(id_asignado), 
+id_encargado int not null auto_increment foreign key references Encargado(id_encargado), 
+id_requerimientos int not null auto_increment foreign key references Requerimientos(id_requerimientos),
+estado bit not null
+);
