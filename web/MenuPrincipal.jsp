@@ -20,7 +20,9 @@
         <br>
         <div class="Ingrese"></div>
         
-        
+        <br>
+        Seleccione para ingresar y editar datos:
+        <br>
 
         <a href="IngreseRequerimientos.jsp" class="btn btn-default"> Ingrese Requerimientos </a><br><br>
         <a href="ConsultarRequerimientos.jsp" class="btn btn-default"> Consultar Requerimientos </a><br><br>
